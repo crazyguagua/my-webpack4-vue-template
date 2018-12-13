@@ -66,16 +66,31 @@ module.exports = {
             test: /\.vue$/,
             use: 'vue-loader'
         }, {
+            test: /\.less$/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'less-loader'
+            }]
+        },{
             test: /\.js$/,
             exclude: /node_modules/,
             use: [{
                 loader: 'babel-loader', 
                 //感觉在.bablerc里面配置没用，只有在这里配置 dynamic-import-webpack 插件才不报错
                 options: {//如果有这个设置则不用再添加.babelrc文件进行配置
-                    "babelrc": false,// 不采用.babelrc的配置
-                    "plugins": [
-                        "dynamic-import-webpack"
-                    ]
+                    // "babelrc": false,// 不采用.babelrc的配置
+                    // "plugins": [
+                    //     ["dynamic-import-webpack"],
+                    //     ["component", [
+                    //         {
+                    //           "libraryName": "mint-ui",
+                    //           "style": true
+                    //         }
+                    //     ]]
+                    // ]
                 }
             }]
         },]
