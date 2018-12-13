@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import {Toast} from 'mint-ui'
 axios.defaults.timeout = 5000;
 axios.defaults.baseURL ='http://localhost:3003'; //填写域名
 
@@ -64,6 +64,11 @@ axios.interceptors.response.use(response => {
       }
     } else {
       console.log('连接到服务器失败')
+      Toast({
+        message: '连接到服务器失败',
+        position: 'top',
+        duration: 2000
+      });
     }
     return Promise.resolve(err.response)
 })

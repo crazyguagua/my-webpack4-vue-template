@@ -17,6 +17,10 @@ const router = [{
     path: '/explore',
     name: 'explore',
     component: () => import('@/views/explore')
+}, {
+    path: '/news',
+    name: 'news',
+    component: () => import('@/views/news')
 }]
 
 export default router

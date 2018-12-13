@@ -28,7 +28,6 @@
         },
         watch: {
             $route() {
-                console.log('改变路由')
             },
             selected: function (val, oldVal) {
                 // 这里就可以通过 val 的值变更来确定
