@@ -4,8 +4,8 @@
         <div class="wrapper">
             <div class="swipers">
                 <mt-swipe :auto="4000">
-                    <mt-swipe-item v-for="img in lunboList">
-                        <img :src="img.url" :alt="img.title">
+                    <mt-swipe-item v-for="img in lunboList" :key="img.url">
+                        <img :src="img.url" >
                     </mt-swipe-item>
                 </mt-swipe>
             </div>

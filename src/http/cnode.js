@@ -1,8 +1,8 @@
 import axios from 'axios';
 import {Toast} from 'mint-ui'
 
-const http = axios.create({timeout:5000,baseURL:'http://192.168.2.94:3003'})
-// axios.defaults.baseURL ='http://localhost:3003'; //填写域名
+const http = axios.create({timeout:5000})
+ axios.defaults.baseURL ='https://cnodejs.org/api/v1'; //填写域名
 
 //http request 拦截器
 http.interceptors.request.use(
@@ -82,7 +82,7 @@ http.interceptors.response.use(response => {
  * @returns {Promise}
  */
 
-export function fetch(url,params={}){
+export function get(url,params={}){
   return new Promise((resolve,reject) => {
     http.get(url,{
       params:params

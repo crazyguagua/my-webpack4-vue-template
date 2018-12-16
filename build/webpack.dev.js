@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.base')
 
-const HOST = 'localhost'
+const HOST = '0.0.0.0'
 const PORT = 9009
 
 module.exports = merge(baseConfig, {

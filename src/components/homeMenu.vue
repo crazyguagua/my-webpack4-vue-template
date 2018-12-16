@@ -18,12 +18,14 @@
                 </a>
             </div>
             <div class="col">
-                <a class="menu">
-                    <div>
-                        <iconfont type="tableshare" />
-                    </div>
-                    <span>分享</span>
-                </a>
+                <router-link to="/cnode" class="menu">
+                    <a class="menu">
+                        <div>
+                            <iconfont type="tableshare" />
+                        </div>
+                        <span>cnode</span>
+                    </a>
+                </router-link>
             </div>
         </div>
         <div class="row">

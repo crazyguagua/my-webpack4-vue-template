@@ -1,6 +1,6 @@
 <template>
     <div>
-        <mt-header title="新闻">
+        <mt-header fixed title="新闻">
             <router-link to="/" slot="left">
                 <mt-button icon="back">返回</mt-button>
             </router-link>
@@ -36,12 +36,8 @@ import NewsList from '_c/news/newsList'
     }
 </script>
 
-<style>
+<style scoped>
 .wrapper{
-    position: absolute;
-    top:40px;
-    bottom:0;
-    width:100%;
-    z-index: 2;
+    padding-top:40px;
 }
 </style>
